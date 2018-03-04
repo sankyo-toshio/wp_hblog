@@ -1,0 +1,33 @@
+version: "2"
+services:
+  wordpress:
+    image: wordpress:latest
+    container_name: "wp_hblog"
+    volumes:
+      - "$PWD:/var/www/html"
+      - "$PWD/.docker/backup:/tmp/backup"
+      - "$PWD/.docker/log:/tmp/log"
+    ports:
+      - "8000:80"
+    depends_on:
+      - db
+    environment:
+      WORDPRESS_DB_HOST: "db:3306"
+    networks:
+      - hblog_wordpress_network
+    env_file: .env
+
+  db:
+    image: mysql:5.7
+    container_name: "wpdb_hblog"
+    volumes:
+      - "db-data:/var/lib/mysql"
+    networks:
+      - hblog_wordpress_network
+    env_file: .env
+
+volumes:
+  db-data:
+
+networks:
+  hblog_wordpress_network:
