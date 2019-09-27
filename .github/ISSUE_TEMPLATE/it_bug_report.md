@@ -2,7 +2,7 @@
 name: 結合テスト不具合報告
 about: 結合テストの不具合報告テンプレート
 title: '"現象"のサマリをタイトルとする'
-labels: 'bug', 'IT Phase'
+labels: 'IT Phase'
 assignees: ''
 
 ---
