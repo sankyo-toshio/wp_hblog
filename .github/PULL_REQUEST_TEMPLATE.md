@@ -2,7 +2,7 @@
 name: 機能追加
 about: 機能追加
 title: '対象チケットと同じタイトル'
-labels: 'bug', 'enhancement'
+labels: bug, enhancement
 assignees: ''
 
 ---
