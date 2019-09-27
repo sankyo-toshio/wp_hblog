@@ -2,7 +2,7 @@
 name: 不具合報告
 about: 不具合報告
 title: '"現象"のサマリをタイトルとする'
-labels: 'bug'
+labels: bug
 assignees: ''
 
 ---
